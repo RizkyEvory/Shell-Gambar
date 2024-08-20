@@ -19,7 +19,7 @@
 <body>
 
     <?php
-
+echo "M4DI~UciH4\n";
 
     //function
     function formatSizeUnits($bytes)
