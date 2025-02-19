@@ -1,4 +1,4 @@
-document.head.innerHTML = `<style>* {
+<style>* {
   margin: 0;
   padding: 0;
 }
