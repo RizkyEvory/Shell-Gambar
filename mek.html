@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="M4DI~UciH4">
+    <meta name="description" content="Elegant and modern design for a hacked page">
+    <meta name="title" content="Oppzzz TerHeked">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs-HkkHKgtsFuBEzKfOE2XswEaho1jdUnFSg&usqp=CAU">
+    <title>Hacked By M4DI~UciH4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00c1, #00fff9, #ff00c1, #00fff9);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Content Styling */
+        .content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1.glitch {
+            font-size: 3em;
+            letter-spacing: 0.1em;
+            position: relative;
+            animation: glitch-skew 2s infinite linear alternate-reverse;
+        }
+
+        h1.glitch::before,
+        h1.glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-shadow: 
+                -2px 0 red, 
+                2px 0 blue, 
+                -3px 0 yellow, 
+                3px 0 green;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        h1.glitch::after {
+            left: 2px;
+            text-shadow: 
+                -2px 0 cyan, 
+                2px 0 magenta, 
+                -3px 0 lime, 
+                3px 0 orange;
+            animation: glitch-anim2 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); transform: translateX(-2px); }
+            25% { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); transform: translateX(2px); }
+            50% { clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); transform: translateX(-4px); }
+            75% { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); transform: translateX(4px); }
+            100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); transform: translateX(0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); transform: translateX(2px); }
+            25% { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); transform: translateX(-2px); }
+            50% { clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); transform: translateX(4px); }
+            75% { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); transform: translateX(-4px); }
+            100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); transform: translateX(0); }
+        }
+
+        @keyframes glitch-skew {
+            0% { transform: skewX(0deg); }
+            50% { transform: skewX(5deg); }
+            100% { transform: skewX(0deg); }
+        }
+
+        /* Subtitle */
+        .sub {
+            font-size: 1.2em;
+            color: #64dcdc;
+            margin-top: 20px;
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1.glitch {
+                font-size: 2em;
+            }
+
+            .sub {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="glitch" data-text="HACKED BY M4DI~UciH4">HACKED BY M4DI~UciH4</h1>
+        <p class="sub">Oppzzz TerHeked</p>
+    </div>
+</body>
+</html>
